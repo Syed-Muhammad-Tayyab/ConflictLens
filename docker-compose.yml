@@ -1,0 +1,10 @@
+services:
+  conflictlens:
+    build: .
+    image: conflictlens:latest
+    container_name: conflictlens
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
